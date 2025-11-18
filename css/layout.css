@@ -1,0 +1,93 @@
+/* ===========================
+   LAYOUT & NAVIGATION
+   =========================== */
+
+/* Main Content */
+.main-content {
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+.main-content.hidden {
+    display: none;
+}
+
+.main-content.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Header Sticky */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00ff88;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Container commun */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+}
+

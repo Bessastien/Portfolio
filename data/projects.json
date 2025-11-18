@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Interface JavaFX - Latice",
+      "language": "Java",
+      "description": "Application de jeu de société développée en JavaFX avec architecture MVC. Gestion avancée des événements utilisateur et interface graphique interactive.",
+      "technologies": ["JavaFX", "MVC", "Events"],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 2,
+      "title": "Base de Données Complexe",
+      "language": "SQL",
+      "description": "Conception et optimisation d'une base de données relationnelle. Schéma complexe avec requêtes avancées et procédures stockées.",
+      "technologies": ["PostgreSQL", "Optimisation", "Requêtes"],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 3,
+      "title": "Mini-jeux Python",
+      "language": "Python",
+      "description": "Collection de jeux classiques (Morpion, Puissance 4) avec code modulaire et architecture propre. Interface console interactive.",
+      "technologies": ["Python", "POO", "Modulaire"],
+      "link": null,
+      "github": null
+    }
+  ]
+}
+

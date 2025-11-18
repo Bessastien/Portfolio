@@ -1,0 +1,16 @@
+{
+  "personal": {
+    "name": "Sébastien Dabert",
+    "title": "Étudiant en 2ème année de BUT Informatique",
+    "hero_greeting": "Salut, je suis",
+    "hero_subtitle": "Étudiant passionné par le développement logiciel.",
+    "github": "https://github.com/bessastien",
+    "email": "sebdab86@gmail.com"
+  },
+  "footer": {
+    "title": "Restons en contact",
+    "subtitle": "Intéressé par mon profil ? N'hésitez pas à me contacter !",
+    "copyright": "© 2025 Sébastien Dabert - Étudiant BUT Informatique"
+  }
+}
+

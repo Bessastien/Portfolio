@@ -1,0 +1,26 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "period": "2024 - 2025",
+      "title": "Agent de quai",
+      "company": "STEF",
+      "skills": ["Rigueur", "Endurance"]
+    },
+    {
+      "id": 2,
+      "period": "2024",
+      "title": "Stage professionnel",
+      "company": "DGFIP",
+      "skills": ["Sérieux", "Respect des procédures"]
+    },
+    {
+      "id": 3,
+      "period": "2022 - 2024",
+      "title": "Paysagiste / Technicien",
+      "company": "Divers",
+      "skills": ["Travail d'équipe", "Adaptabilité"]
+    }
+  ]
+}
+
