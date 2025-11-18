@@ -1,15 +1,26 @@
 {
   "skills": [
+    "PHP 8",
     "Java",
     "Python",
-    "SQL",
-    "C++",
-    "Git",
-    "Linux",
+    "MySQL",
+    "JavaScript",
+    "HTML/CSS/JS",
     "JavaFX",
-    "PostgreSQL",
-    "MVC",
-    "POO"
+    "Architecture MVC",
+    "Architecture modulaire",
+    "POO",
+    "Algorithmique",
+    "Cryptographie",
+    "Simulation",
+    "Virtualisation",
+    "VLANs",
+    "Services réseau",
+    "Configuration système",
+    "DHCP",
+    "DNS",
+    "Apache",
+    "Design responsive"
   ]
 }
 

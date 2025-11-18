@@ -5,20 +5,20 @@
 
 // Configuration des lignes du terminal
 const terminalLines = [
-    { text: "> boot_system --user=sebastien_dabert", color: "#00ff88", delay: 300 },
+    { text: "> boot_system --user=sebastien_dabert", color: "#00ff88", delay: 500 },
     { text: "> initializing_modules...", color: "#00ccff", delay: 2 },
     { text: "> [OK] Java runtime loaded", color: "#00ff88", delay: 2 },
     { text: "> [OK] Python interpreter ready", color: "#00ff88", delay: 2 },
     { text: "> [OK] Creative_Mind module active", color: "#00ff88", delay: 2 },
     { text: "> [OK] SQL database connected", color: "#00ff88", delay: 2 },
-    { text: "> launching_portfolio.exe...", color: "#00ccff", delay: 80 },
+    { text: "> launching_portfolio.exe...", color: "#00ccff", delay: 20 },
     { text: "> [SUCCESS] Welcome to Sébastien's Portfolio!", color: "#00ff88", delay: 150 }
 ];
 
 // Variables d'état
 let currentLine = 0;
 let currentChar = 0;
-let typingSpeed = 50; // Première ligne lente
+let typingSpeed = 1; // Première ligne lente
 
 // Éléments DOM
 const terminalText = document.getElementById('terminal-text');

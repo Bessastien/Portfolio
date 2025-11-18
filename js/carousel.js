@@ -118,8 +118,9 @@ function filterProjectsBySkill(skill) {
         }
     });
 
-    // Si aucun projet trouvé, ne rien faire et désélectionner
+    // Si aucun projet trouvé, restaurer l'affichage normal et désélectionner
     if (!hasMatch) {
+        showAllProjects();
         deselectSkill();
         return;
     }

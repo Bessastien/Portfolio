@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="project-title">${escapeHTML(project.title)}</h3>
                 </div>
                 <p class="project-description">
-                    ${escapeHTML(project.description)}
+                    ${escapeHTML(project.shortDescription || project.description)}
                 </p>
                 <div class="project-footer">
                     ${project.technologies.map(tech => `<span class="tech-badge">${escapeHTML(tech)}</span>`).join('')}

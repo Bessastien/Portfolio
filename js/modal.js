@@ -81,7 +81,6 @@ function openProjectModal(projectId) {
 
     // Liens
     const githubLink = document.getElementById('modal-github-link');
-    const demoLink = document.getElementById('modal-demo-link');
 
     if (project.github) {
         githubLink.href = project.github;
@@ -91,13 +90,6 @@ function openProjectModal(projectId) {
         githubLink.classList.add('disabled');
     }
 
-    if (project.link) {
-        demoLink.href = project.link;
-        demoLink.classList.remove('disabled');
-    } else {
-        demoLink.href = '#';
-        demoLink.classList.add('disabled');
-    }
 
     // Afficher le modal
     modal.classList.add('active');
