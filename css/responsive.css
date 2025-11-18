@@ -53,13 +53,21 @@
         text-align: center;
     }
 
-    .hero-shape {
-        display: none; /* Masquer sur mobile car le suivi de souris ne fonctionne pas sur tactile */
+    .cv-download-btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
     }
+
+    .cv-download-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Le cercle est géré par JavaScript (détection tactile) */
 
     /* Projets */
     .projects {
-        padding: 6rem 1.5rem 3rem;
+        padding: 3rem 1.5rem 2rem;
     }
 
     .projects-grid {
@@ -71,32 +79,31 @@
         padding: 1.5rem;
     }
 
-    .project-header {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .project-tag {
-        align-self: flex-start;
-    }
 
     /* Parcours */
     .parcours {
-        padding: 6rem 1.5rem 3rem;
+        padding: 3rem 1.5rem 2rem;
     }
 
     .timeline {
         padding-left: 1.5rem;
     }
 
-    .timeline-item {
-        padding-left: 2rem;
+    .timeline::before {
+        left: 0;
     }
 
-    .timeline-marker {
-        left: -2rem;
-        width: 12px;
-        height: 12px;
+    /* Date au-dessus du bloc sur mobile */
+    .timeline-date-outside {
+        position: static;
+        width: auto;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .timeline-item {
+        padding-left: 1.5rem;
     }
 
     .timeline-content {
@@ -109,7 +116,21 @@
 
     /* Compétences */
     .skills {
-        padding: 6rem 1.5rem 4rem;
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .skills-carousel {
+        gap: 0.5rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     .skills-tags {
@@ -123,7 +144,7 @@
 
     /* Footer */
     .footer {
-        padding: 4rem 1.5rem 2rem;
+        padding: 3rem 1.5rem 2rem;
     }
 
     .footer-links {

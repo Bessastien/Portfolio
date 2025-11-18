@@ -1,3 +1,4 @@
+Projet a ajouter :
     Projet Web "La Cosina" (PHP/SQL)
         Description : Création complète d'un site web de recettes ("La Cosina") incluant la gestion d'une base de données, l'affichage en liste et en détail des recettes, et potentiellement des fonctionnalités de formulaire.
         Compétences démontrées : Développement Full-Stack (PHP, HTML/CSS/Bootstrap), conception et manipulation de bases de données relationnelles (SQL, modélisation), MVC (Contrôleurs, Vues, Modèles).
@@ -15,7 +16,7 @@
         Compétences démontrées : Maîtrise avancée de SQL, modélisation de données (MCD/MLD implicite), optimisation des requêtes.
         Fichiers pertinents : TP1.pdf, TP2.pdf, TP3.pdf, TP2_script.sql, TP3_script.sql.
 
-Projets de Système et Réseau
+    Projets de Système et Réseau
 
     SAÉ 2.03 : Installation de Services Réseau
         Description : Conception, configuration et déploiement d'une infrastructure réseau pour une entreprise, incluant la segmentation en sous-réseaux (Personnel, Clients, Serveurs) et l'implémentation de services critiques (DHCP, SSH, FTP).

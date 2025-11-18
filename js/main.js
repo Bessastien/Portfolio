@@ -11,11 +11,6 @@
  * Initialisation au chargement de la page
  */
 window.addEventListener('DOMContentLoaded', () => {
-    // Charger les données depuis les fichiers JSON
-    if (window.initData) {
-        window.initData();
-    }
-
     // Créer l'effet matrix en arrière-plan
     if (window.createMatrixEffect) {
         window.createMatrixEffect();
@@ -28,6 +23,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Initialiser la navigation smooth scroll
     initSmoothScroll();
+});
+
+/**
+ * Initialiser le carousel après que le contenu principal soit visible
+ */
+window.addEventListener('contentVisible', () => {
+    if (window.initSkillsCarousel) {
+        window.initSkillsCarousel();
+    }
 });
 
 /**

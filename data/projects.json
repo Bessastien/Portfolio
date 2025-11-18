@@ -5,7 +5,7 @@
       "title": "Interface JavaFX - Latice",
       "language": "Java",
       "description": "Application de jeu de société développée en JavaFX avec architecture MVC. Gestion avancée des événements utilisateur et interface graphique interactive.",
-      "technologies": ["JavaFX", "MVC", "Events"],
+      "technologies": ["Java", "JavaFX", "MVC", "POO", "Git"],
       "link": null,
       "github": null
     },
@@ -14,7 +14,7 @@
       "title": "Base de Données Complexe",
       "language": "SQL",
       "description": "Conception et optimisation d'une base de données relationnelle. Schéma complexe avec requêtes avancées et procédures stockées.",
-      "technologies": ["PostgreSQL", "Optimisation", "Requêtes"],
+      "technologies": ["SQL", "PostgreSQL", "Linux", "Git"],
       "link": null,
       "github": null
     },
@@ -23,7 +23,7 @@
       "title": "Mini-jeux Python",
       "language": "Python",
       "description": "Collection de jeux classiques (Morpion, Puissance 4) avec code modulaire et architecture propre. Interface console interactive.",
-      "technologies": ["Python", "POO", "Modulaire"],
+      "technologies": ["Python", "POO", "Git"],
       "link": null,
       "github": null
     }
