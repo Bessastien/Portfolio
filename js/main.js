@@ -52,23 +52,6 @@ function initSmoothScroll() {
     });
 }
 
-/**
- * Exposer les fonctions pour qu'elles soient accessibles depuis terminal.js
- */
-window.initParallax = function() {
-    // Appeler directement la fonction depuis hero.js (chargée via script tag)
-    if (typeof initParallax !== 'undefined') {
-        // Éviter la récursion - la fonction est déjà définie dans hero.js
-        return;
-    }
-};
-
-/**
- * GESTION DES ERREURS GLOBALES
- */
-window.addEventListener('error', (e) => {
-    console.error('Erreur détectée:', e.message);
-});
 
 /**
  * LOG DE DÉMARRAGE

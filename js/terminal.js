@@ -5,20 +5,20 @@
 
 // Configuration des lignes du terminal
 const terminalLines = [
-    { text: "> boot_system --user=sebastien_dabert", color: "#00ff88", delay: 25 },
-    { text: "> initializing_modules...", color: "#00ccff", delay: 50 },
-    { text: "> [OK] Java runtime loaded", color: "#00ff88", delay: 40 },
-    { text: "> [OK] Python interpreter ready", color: "#00ff88", delay: 40 },
-    { text: "> [OK] Creative_Mind module active", color: "#00ff88", delay: 50 },
-    { text: "> [OK] SQL database connected", color: "#00ff88", delay: 40 },
-    { text: "> launching_portfolio.exe...", color: "#00ccff", delay: 100 },
-    { text: "> [SUCCESS] Welcome to Sébastien's Portfolio!", color: "#00ff88", delay: 150 }
+    { text: "> boot_system --user=sebastien_dabert", color: "#00ff88", delay: 5 },
+    { text: "> initializing_modules...", color: "#00ccff", delay: 10 },
+    { text: "> [OK] Java runtime loaded", color: "#00ff88", delay: 10 },
+    { text: "> [OK] Python interpreter ready", color: "#00ff88", delay: 10 },
+    { text: "> [OK] Creative_Mind module active", color: "#00ff88", delay: 10 },
+    { text: "> [OK] SQL database connected", color: "#00ff88", delay: 10 },
+    { text: "> launching_portfolio.exe...", color: "#00ccff", delay: 10 },
+    { text: "> [SUCCESS] Welcome to Sébastien's Portfolio!", color: "#00ff88", delay: 25 }
 ];
 
 // Variables d'état
 let currentLine = 0;
 let currentChar = 0;
-const typingSpeed = 5;
+const typingSpeed = 1;
 
 // Éléments DOM
 const terminalText = document.getElementById('terminal-text');
@@ -48,7 +48,7 @@ function typeWriter() {
             currentChar++;
 
             // Variation aléatoire pour effet naturel
-            const randomDelay = typingSpeed + Math.random() * 15;
+            const randomDelay = typingSpeed + Math.random() * 5;
             setTimeout(typeWriter, randomDelay);
         } else {
             // Ligne terminée, passer à la suivante
@@ -60,7 +60,7 @@ function typeWriter() {
                 setTimeout(typeWriter, terminalLines[currentLine - 1].delay);
             } else {
                 // Animation terminée
-                setTimeout(revealMainContent, 200);
+                setTimeout(revealMainContent, 50);
             }
         }
     }
@@ -109,7 +109,7 @@ function initTerminal() {
     }
 
     // Démarrer l'animation du terminal
-    setTimeout(typeWriter, 200);
+    setTimeout(typeWriter, 50);
 }
 
 // Exposer la fonction globalement

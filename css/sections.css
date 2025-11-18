@@ -136,7 +136,8 @@
     font-weight: 500;
     border-radius: 25px;
     transition: all 0.3s ease;
-    cursor: default;
+    cursor: pointer;
+    user-select: none;
 }
 
 .skill-tag:hover {
@@ -145,6 +146,11 @@
     color: #00ff88;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
+}
+
+.skill-tag:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
 }
 
 /* ===========================

@@ -29,8 +29,15 @@ async function renderProjects() {
     const container = document.getElementById('projects-container');
     if (!container) return;
 
-    container.innerHTML = data.projects.map(project => `
-        <article class="project-card">
+    // Stocker les projets globalement pour la recherche
+    window.projectsData = data.projects;
+
+    container.innerHTML = data.projects.map((project, index) => `
+        <article class="project-card" 
+                 data-project-id="${project.id}" 
+                 data-project-index="${index}" 
+                 data-technologies="${project.technologies.join(',').toLowerCase()}" 
+                 data-language="${project.language.toLowerCase()}">
             <div class="project-header">
                 <h3 class="project-title">${project.title}</h3>
                 <span class="project-tag">${project.language}</span>
@@ -83,8 +90,65 @@ async function renderSkills() {
     if (!container) return;
 
     container.innerHTML = data.skills.map(skill =>
-        `<span class="skill-tag">${skill}</span>`
+        `<span class="skill-tag" data-skill="${skill.toLowerCase()}" style="cursor: pointer;">${skill}</span>`
     ).join('');
+
+    // Ajouter les événements de clic sur chaque compétence
+    setTimeout(() => {
+        const skillTags = container.querySelectorAll('.skill-tag');
+        skillTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const skill = tag.dataset.skill;
+                navigateToProjectBySkill(skill, tag.textContent);
+            });
+        });
+    }, 100);
+}
+
+/**
+ * Naviguer vers le premier projet contenant une compétence
+ */
+function navigateToProjectBySkill(skill, skillName) {
+    const projectCards = document.querySelectorAll('.project-card');
+    let foundProject = null;
+
+    // Chercher le premier projet avec cette compétence
+    for (const card of projectCards) {
+        const technologies = card.dataset.technologies || '';
+        const language = card.dataset.language || '';
+
+        if (technologies.includes(skill) || language === skill) {
+            foundProject = card;
+            break;
+        }
+    }
+
+    if (foundProject) {
+        // Supprimer la mise en évidence précédente
+        document.querySelectorAll('.project-card.highlight').forEach(card => {
+            card.classList.remove('highlight');
+        });
+
+        // Faire défiler vers le projet
+        foundProject.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+
+        // Ajouter une mise en évidence temporaire
+        setTimeout(() => {
+            foundProject.classList.add('highlight');
+
+            // Retirer la mise en évidence après 3 secondes
+            setTimeout(() => {
+                foundProject.classList.remove('highlight');
+            }, 3000);
+        }, 500);
+
+        console.log(`✓ Navigation vers projet avec compétence: ${skillName}`);
+    } else {
+        console.log(`⚠ Aucun projet trouvé avec la compétence: ${skillName}`);
+    }
 }
 
 /**

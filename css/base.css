@@ -18,21 +18,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Scrollbar personnalisée */
+/* Scrollbar cachée */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0;
+    display: none;
 }
 
-::-webkit-scrollbar-track {
-    background: #0a0a0a;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00ff88, #00ccff);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #00ccff, #00ff88);
+body {
+    -ms-overflow-style: none;  /* IE et Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 

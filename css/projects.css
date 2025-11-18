@@ -104,3 +104,24 @@
     color: #00ff88;
 }
 
+/* Effet de mise en évidence quand un projet est sélectionné */
+.project-card.highlight {
+    animation: highlight-pulse 1.5s ease-in-out;
+    border-color: rgba(0, 255, 136, 0.8);
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4), 0 0 60px rgba(0, 204, 255, 0.2);
+    transform: scale(1.02);
+}
+
+.project-card.highlight::before {
+    opacity: 1;
+}
+
+@keyframes highlight-pulse {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(0, 255, 136, 0.4), 0 0 60px rgba(0, 204, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 255, 136, 0.6), 0 0 80px rgba(0, 204, 255, 0.4);
+    }
+}
+
