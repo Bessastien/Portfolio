@@ -6,6 +6,14 @@
       "language": "Java",
       "description": "Application de jeu de société développée en JavaFX avec architecture MVC. Gestion avancée des événements utilisateur et interface graphique interactive.",
       "technologies": ["Java", "JavaFX", "MVC", "POO", "Git"],
+      "features": [
+        "Interface graphique interactive avec JavaFX",
+        "Architecture MVC pour une meilleure organisation du code",
+        "Gestion des événements utilisateur et interactions",
+        "Système de règles du jeu automatisé",
+        "Interface utilisateur fluide et responsive"
+      ],
+      "images": [],
       "link": null,
       "github": null
     },
@@ -15,7 +23,14 @@
       "language": "SQL",
       "description": "Conception et optimisation d'une base de données relationnelle. Schéma complexe avec requêtes avancées et procédures stockées.",
       "technologies": ["SQL", "PostgreSQL", "Linux", "Git"],
-      "link": null,
+      "features": [
+        "Schéma de base de données normalisé et optimisé",
+        "Requêtes SQL complexes avec jointures multiples",
+        "Procédures stockées et triggers",
+        "Optimisation des performances avec indexes",
+        "Gestion des transactions et de l'intégrité référentielle"
+      ],
+      "images": [],
       "github": null
     },
     {
@@ -24,9 +39,101 @@
       "language": "Python",
       "description": "Collection de jeux classiques (Morpion, Puissance 4) avec code modulaire et architecture propre. Interface console interactive.",
       "technologies": ["Python", "POO", "Git"],
+      "features": [
+        "Jeu de Morpion (Tic-Tac-Toe) avec IA",
+        "Puissance 4 pour deux joueurs",
+        "Interface console interactive et intuitive",
+        "Code modulaire et réutilisable",
+        "Architecture orientée objet propre"
+      ],
+      "images": [],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 4,
+      "title": "La Cosina - Site de Recettes",
+      "language": "PHP/SQL",
+      "description": "Création complète d'un site de recettes avec architecture MVC PHP, base MySQL modélisée, interface Bootstrap responsive et formulaires sécurisés.",
+      "technologies": ["PHP", "MySQL", "Bootstrap", "MVC", "SQL", "Git"],
+      "features": [
+        "Catalogue filtrable par ingrédients, saison ou difficulté",
+        "Fiches détaillées avec étapes illustrées, timers et conseils",
+        "Back-office CRUD complet avec validation serveur",
+        "Connexion PDO sécurisée et gestion fine des rôles",
+        "Documentation du schéma ER et scripts d'initialisation"
+      ],
+      "images": [],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 5,
+      "title": "SAÉ LATICE-COTECH",
+      "language": "Java",
+      "description": "Développement collaboratif du jeu Latice Cothèque en Java/JavaFX avec bonnes pratiques, intégration continue et couverture de tests mesurée.",
+      "technologies": ["Java", "JavaFX", "JUnit", "GitHub", "MVC", "CI/CD"],
+      "features": [
+        "Plateau dynamique et animations JavaFX",
+        "Moteur de règles encapsulé testé (~20 % de couverture rapportée)",
+        "Sauvegarde/reprise de partie et IA basique",
+        "Workflow GitHub flow avec revues croisées",
+        "Guide contributeur et rapport de qualité logicielle"
+      ],
+      "images": [],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 6,
+      "title": "TP Cryptographie : Hachage & Chiffrement",
+      "language": "Python",
+      "description": "Implémentation du chiffrement de Vigenère (chiffrage, déchiffrage, analyse de Kasiski) et de fonctions de hachage custom avec chasse aux collisions.",
+      "technologies": ["Python", "hashlib", "Base64", "Cryptanalyse", "Tests"],
+      "features": [
+        "CLI Vigenère complet avec analyse fréquentielle",
+        "Outil de Kasiski pour retrouver la longueur de clé",
+        "Hachages maison + SHA-256 avec recherche empirique",
+        "Générateur de mot de passe Base64 documenté",
+        "Rapport d'analyse de sécurité et limites"
+      ],
+      "images": [],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 7,
+      "title": "TP Bases de Données - SQL Avancé",
+      "language": "SQL",
+      "description": "Exercices avancés de modélisation et de requêtes SQL pour domaines sport et jeux vidéo, avec vues, procédures stockées et triggers.",
+      "technologies": ["SQL", "PostgreSQL", "PL/pgSQL", "Optimisation", "Modélisation"],
+      "features": [
+        "Schemas normalisés pour EPREUVE/ATHLETE et JOUEUR/PARTIE",
+        "Vues analytiques pour dashboards et exports",
+        "Procédures stockées paramétrées et transactions",
+        "Triggers d'intégrité, audit et scoring",
+        "Analyse de plans d'exécution et index ciblés"
+      ],
+      "images": [],
+      "link": null,
+      "github": null
+    },
+    {
+      "id": 8,
+      "title": "SAÉ 2.03 - Installation de Services Réseau",
+      "language": "Réseau",
+      "description": "Conception, configuration et déploiement d'une infrastructure réseau segmentée (Personnel, Clients, Serveurs) avec services critiques sécurisés.",
+      "technologies": ["VLSM", "DHCP", "SSH", "FTP", "Linux", "Sécurité"],
+      "features": [
+        "Plan d'adressage VLSM et VLAN isolant la zone serveurs",
+        "Services DHCP/SSH/FTP durcis et scriptés",
+        "ACL, pare-feu et supervision basique",
+        "Procédures d'exploitation et reprise d'activité",
+        "Documentation détaillée de l'architecture"
+      ],
+      "images": [],
       "link": null,
       "github": null
     }
   ]
 }
-

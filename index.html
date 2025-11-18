@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -37,10 +38,16 @@
         <!-- Header Sticky -->
         <header class="header" id="header">
             <nav class="nav">
-                <a href="#projects" class="nav-link">/// Projets</a>
-                <a href="#parcours" class="nav-link">/// Parcours</a>
-                <a href="#skills" class="nav-link">/// Compétences</a>
-                <a href="#contact" class="nav-link">/// Contact</a>
+                <div class="nav-actions">
+                    <a href="#projects" class="nav-link">/// Projets</a>
+                    <a href="#skills" class="nav-link">/// Compétences</a>
+                    <a href="#parcours" class="nav-link">/// Parcours</a>
+                    <a href="#contact" class="nav-link">/// Contact</a>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+                        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                        <span class="theme-toggle-text">Sombre</span>
+                    </button>
+                </div>
             </nav>
         </header>
 
@@ -71,16 +78,6 @@
             </div>
         </section>
 
-        <!-- Section Parcours -->
-        <section class="parcours" id="parcours">
-            <div class="container">
-                <h2 class="section-title">/// Parcours</h2>
-                <div class="timeline" id="timeline">
-                    <!-- Le parcours sera injecté ici par JavaScript -->
-                </div>
-            </div>
-        </section>
-
         <!-- Section Compétences -->
         <section class="skills" id="skills">
             <div class="container">
@@ -104,6 +101,16 @@
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Parcours -->
+        <section class="parcours" id="parcours">
+            <div class="container">
+                <h2 class="section-title">/// Parcours</h2>
+                <div class="timeline" id="timeline">
+                    <!-- Le parcours sera injecté ici par JavaScript -->
                 </div>
             </div>
         </section>
@@ -149,13 +156,98 @@
         </footer>
     </div>
 
+    <!-- Modal Projet -->
+    <div id="project-modal" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" aria-label="Fermer">&times;</button>
+                <h2 class="modal-title" id="modal-title"></h2>
+                <div class="modal-language" id="modal-language"></div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description" id="modal-description"></p>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Technologies</h3>
+                    <div class="modal-technologies" id="modal-technologies"></div>
+                </div>
+
+                <div class="modal-section" id="modal-images-container">
+                    <h3 class="modal-section-title">Aperçu</h3>
+                    <div class="modal-images" id="modal-images"></div>
+                </div>
+
+                <div class="modal-section" id="modal-features-container">
+                    <h3 class="modal-section-title">Fonctionnalités</h3>
+                    <ul class="modal-features" id="modal-features"></ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Liens</h3>
+                    <div class="modal-links">
+                        <a href="#" id="modal-github-link" target="_blank" rel="noopener noreferrer" class="modal-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Voir sur GitHub
+                        </a>
+                        <a href="#" id="modal-demo-link" target="_blank" rel="noopener noreferrer" class="modal-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                            Voir la démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Expérience -->
+    <div id="experience-modal" class="experience-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="exp-modal-close" aria-label="Fermer">&times;</button>
+                <h2 class="modal-title" id="exp-modal-title"></h2>
+                <div class="modal-subtitle">
+                    <span class="modal-company" id="exp-modal-company"></span>
+                    <span class="modal-period" id="exp-modal-period"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description" id="exp-modal-description"></p>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Missions principales</h3>
+                    <ul class="modal-features" id="exp-modal-missions"></ul>
+                </div>
+
+                <div class="modal-section" id="exp-modal-achievements-container">
+                    <h3 class="modal-section-title">Réalisations</h3>
+                    <ul class="modal-features modal-achievements" id="exp-modal-achievements"></ul>
+                </div>
+
+                <div class="modal-section" id="exp-modal-technologies-container">
+                    <h3 class="modal-section-title">Outils & Technologies</h3>
+                    <div class="modal-technologies" id="exp-modal-technologies"></div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Compétences développées</h3>
+                    <div class="modal-technologies" id="exp-modal-skills"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts modulaires -->
     <script src="js/data-loader.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/matrix.js"></script>
     <script src="js/hero.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/terminal.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
-

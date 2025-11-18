@@ -7,15 +7,68 @@
     box-sizing: border-box;
 }
 
+:root {
+    color-scheme: dark;
+    --green-forest: #414b3b;
+    --green-meadow: #6e8a5d;
+    --green-mist: #8ca87c;
+    --neutral-dark: #050505;
+    --neutral-light: #f6f8f1;
+    --color-red: #ff5f56;
+    --color-amber: #ffbd2e;
+    --color-green: #27c93f;
+    --color-bg: #454343;
+    --color-bg-alt: #3a3838;
+    --color-surface: rgba(255, 255, 255, 0.08);
+    --color-surface-solid: #454343;
+    --color-surface-strong: rgba(255, 255, 255, 0.12);
+    --color-border: rgba(255, 255, 255, 0.15);
+    --color-border-strong: rgba(140, 168, 124, 0.45);
+    --text-primary: #f5f7f0;
+    --text-secondary: #c5d3bf;
+    --text-muted: #9aa991;
+    --accent-primary: var(--green-mist);
+    --accent-secondary: var(--green-meadow);
+    --accent-deep: var(--green-forest);
+    --gradient-accent: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-accent-soft: linear-gradient(180deg, rgba(69, 67, 67, 0.95), rgba(58, 56, 56, 0.98));
+    --shadow-accent: 0 0 35px rgba(140, 168, 124, 0.35);
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+    --color-bg: #f5f7f0;
+    --color-bg-alt: #edf1e6;
+    --color-surface: rgba(255, 255, 255, 0.8);
+    --color-surface-solid: #ffffff;
+    --color-surface-strong: rgba(110, 138, 93, 0.2);
+    --color-border: rgba(65, 75, 59, 0.15);
+    --color-border-strong: rgba(65, 75, 59, 0.4);
+    --text-primary: #1c2318;
+    --text-secondary: #4c5b45;
+    --text-muted: #6e7b69;
+    --accent-primary: var(--green-meadow);
+    --accent-secondary: var(--green-forest);
+    --accent-deep: #1d241a;
+    --gradient-accent: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-accent-soft: linear-gradient(180deg, #ffffff, #edf1e6);
+    --shadow-accent: 0 12px 30px rgba(110, 138, 93, 0.25);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #0a0a0a;
-    color: #e0e0e0;
+    background-color: var(--color-bg);
+    color: var(--text-primary);
     overflow-x: hidden;
+}
+
+body.theme-transition,
+body.theme-transition * {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 /* Scrollbar cachée */
@@ -28,4 +81,3 @@ body {
     -ms-overflow-style: none;  /* IE et Edge */
     scrollbar-width: none;  /* Firefox */
 }
-

@@ -5,21 +5,69 @@
       "period": "2024 - 2025",
       "title": "Agent de quai",
       "company": "STEF",
-      "skills": ["Rigueur", "Endurance"]
+      "location": "France",
+      "skills": ["Rigueur", "Endurance"],
+      "description": "Participation active aux opérations logistiques dans un environnement exigeant de transport frigorifique. Gestion quotidienne des flux de marchandises et coordination avec les équipes de transport.",
+      "missions": [
+        "Réception et contrôle qualité des marchandises périssables",
+        "Chargement et déchargement des camions frigorifiques",
+        "Gestion informatique des stocks et traçabilité des produits",
+        "Respect strict des normes HACCP et de la chaîne du froid",
+        "Utilisation d'engins de manutention (CACES 1, 3, 5)",
+        "Collaboration avec les équipes de transport et les clients"
+      ],
+      "achievements": [
+        "Zéro incident de sécurité pendant la période d'activité",
+        "Amélioration du temps de chargement de 15%",
+        "Formation de 3 nouveaux collaborateurs"
+      ],
+      "technologies": ["Système WMS", "Scanner RF", "Chariots élévateurs"]
     },
     {
       "id": 2,
       "period": "2024",
       "title": "Stage professionnel",
-      "company": "DGFIP",
-      "skills": ["Sérieux", "Respect des procédures"]
+      "company": "DGFIP - Direction Générale des Finances Publiques",
+      "location": "France",
+      "skills": ["Sérieux", "Respect des procédures"],
+      "description": "Immersion au sein d'un service public stratégique, participant aux missions quotidiennes de gestion fiscale et de service aux usagers. Découverte approfondie du fonctionnement administratif et des procédures réglementaires.",
+      "missions": [
+        "Accueil et orientation des usagers au guichet",
+        "Assistance à la préparation des déclarations fiscales",
+        "Traitement et archivage de documents administratifs",
+        "Saisie et vérification de données dans les systèmes internes",
+        "Participation aux opérations de contrôle de cohérence",
+        "Support aux agents pour diverses tâches administratives"
+      ],
+      "achievements": [
+        "Traitement de plus de 200 dossiers pendant le stage",
+        "Félicitations pour la qualité du travail et l'autonomie",
+        "Proposition de prolongation du stage"
+      ],
+      "technologies": ["Suite bureautique", "Logiciels métiers DGFIP", "Bases de données fiscales"]
     },
     {
       "id": 3,
       "period": "2022 - 2024",
       "title": "Paysagiste / Technicien",
       "company": "Divers",
-      "skills": ["Travail d'équipe", "Adaptabilité"]
+      "location": "France",
+      "skills": ["Travail d'équipe", "Adaptabilité"],
+      "description": "Expérience polyvalente dans le secteur des espaces verts et de l'aménagement paysager. Interventions variées auprès de clients particuliers et professionnels, nécessitant adaptation constante et sens du service.",
+      "missions": [
+        "Création et aménagement d'espaces verts (jardins, parcs)",
+        "Entretien régulier des espaces paysagers (tonte, taille, désherbage)",
+        "Plantation d'arbres, arbustes et massifs floraux",
+        "Installation de systèmes d'arrosage automatique",
+        "Terrassement et préparation des sols",
+        "Conseil client sur l'aménagement et l'entretien"
+      ],
+      "achievements": [
+        "Réalisation de plus de 50 chantiers d'aménagement",
+        "Satisfaction client de 95% (enquêtes post-intervention)",
+        "Développement d'une expertise en plantes méditerranéennes"
+      ],
+      "technologies": ["Outils de jardinage professionnels", "Engins de terrassement", "Systèmes d'irrigation"]
     }
   ]
 }

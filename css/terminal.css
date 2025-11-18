@@ -7,7 +7,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color: var(--color-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,13 +31,13 @@
     opacity: 0.1;
     pointer-events: none;
     background:
-        linear-gradient(90deg, transparent 0%, rgba(0, 255, 136, 0.03) 50%, transparent 100%),
+        linear-gradient(90deg, transparent 0%, rgba(140, 168, 124, 0.06) 50%, transparent 100%),
         repeating-linear-gradient(
             0deg,
-            rgba(0, 255, 136, 0.03) 0px,
+            rgba(140, 168, 124, 0.05) 0px,
             transparent 1px,
             transparent 2px,
-            rgba(0, 255, 136, 0.03) 3px
+            rgba(140, 168, 124, 0.05) 3px
         );
     animation: matrix-scroll 20s linear infinite;
 }
@@ -55,13 +55,13 @@
 .terminal-wrapper {
     width: 90%;
     max-width: 800px;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(69, 67, 67, 0.95);
     border-radius: 8px;
     box-shadow:
-        0 0 80px rgba(0, 255, 136, 0.3),
-        0 0 40px rgba(0, 204, 255, 0.2),
+        0 0 80px rgba(140, 168, 124, 0.3),
+        0 0 40px rgba(65, 75, 59, 0.2),
         inset 0 0 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    border: 1px solid var(--color-border-strong);
     overflow: hidden;
     animation: terminal-glitch 3s ease-in-out infinite;
 }
@@ -86,12 +86,12 @@
 
 /* Terminal Header */
 .terminal-header {
-    background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+    background: linear-gradient(180deg, rgba(69, 67, 67, 0.6), rgba(58, 56, 56, 0.95));
     padding: 12px 15px;
     display: flex;
     align-items: center;
     gap: 8px;
-    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+    border-bottom: 1px solid rgba(140, 168, 124, 0.3);
 }
 
 .terminal-btn {
@@ -102,62 +102,54 @@
 }
 
 .terminal-btn.red {
-    background: #ff5f56;
-    box-shadow: 0 0 5px #ff5f56;
+    background: var(--color-red);
+    box-shadow: 0 0 5px var(--color-red);
 }
 
 .terminal-btn.yellow {
-    background: #ffbd2e;
-    box-shadow: 0 0 5px #ffbd2e;
+    background: var(--color-amber);
+    box-shadow: 0 0 5px var(--color-amber);
 }
 
 .terminal-btn.green {
-    background: #27c93f;
-    box-shadow: 0 0 5px #27c93f;
+    background: var(--color-green);
+    box-shadow: 0 0 5px var(--color-green);
 }
 
 .terminal-title {
     margin-left: auto;
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
-    color: #00ff88;
+    color: var(--accent-primary);
     font-weight: 600;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    text-shadow: 0 0 10px rgba(140, 168, 124, 0.4);
 }
 
 /* Terminal Content */
 .terminal-content {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    color: #00ff88;
+    color: var(--accent-primary);
     line-height: 1.8;
     padding: 25px;
     min-height: 300px;
     background: rgba(0, 0, 0, 0.8);
-    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+    text-shadow: 0 0 5px rgba(140, 168, 124, 0.4);
 }
 
 #terminal-text {
     white-space: pre-wrap;
+    color: var(--accent-primary);
     animation: text-flicker 0.15s infinite alternate;
-}
-
-@keyframes text-flicker {
-    0% {
-        opacity: 0.95;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .cursor {
     display: inline-block;
     width: 10px;
-    background-color: #00ff88;
+    background-color: var(--accent-primary);
     animation: cursor-blink 0.8s infinite, cursor-glitch 5s ease-in-out infinite;
     margin-left: 2px;
-    box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+    box-shadow: 0 0 10px rgba(140, 168, 124, 0.6);
 }
 
 @keyframes cursor-blink {
@@ -184,3 +176,21 @@
     }
 }
 
+/* Scrollbar Styles */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(140, 168, 124, 0.4);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(140, 168, 124, 0.6);
+}

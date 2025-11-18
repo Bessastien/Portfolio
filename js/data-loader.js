@@ -36,9 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const populateProjects = (projects) => {
         const projectsGrid = document.getElementById('projects-grid');
         projectsGrid.innerHTML = '';
+
+        // Initialiser le modal avec les données des projets
+        if (typeof initProjectModal === 'function') {
+            initProjectModal(projects);
+        }
+
         projects.forEach(project => {
             const projectCard = document.createElement('article');
             projectCard.className = 'project-card';
+            projectCard.setAttribute('data-project-id', project.id);
             projectCard.innerHTML = `
                 <div class="project-header">
                     <h3 class="project-title">${escapeHTML(project.title)}</h3>
@@ -50,6 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${project.technologies.map(tech => `<span class="tech-badge">${escapeHTML(tech)}</span>`).join('')}
                 </div>
             `;
+
+            // Ajouter l'écouteur de clic pour ouvrir le modal
+            projectCard.addEventListener('click', () => {
+                if (typeof openProjectModal === 'function') {
+                    openProjectModal(project.id);
+                }
+            });
+
             projectsGrid.appendChild(projectCard);
         });
     };
@@ -57,9 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const populateExperiences = (experiences) => {
         const timeline = document.getElementById('timeline');
         timeline.innerHTML = '';
+
+        // Initialiser le modal avec les données des expériences
+        if (typeof initExperienceModal === 'function') {
+            initExperienceModal(experiences);
+        }
+
         experiences.forEach(exp => {
             const timelineItem = document.createElement('article');
             timelineItem.className = 'timeline-item';
+            timelineItem.setAttribute('data-experience-id', exp.id);
             const skillsFormatted = exp.skills.map(skill => `<strong>${escapeHTML(skill)}</strong>`).join(' & ');
             timelineItem.innerHTML = `
                 <div class="timeline-date-outside">${escapeHTML(exp.period)}</div>
@@ -71,6 +93,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     </p>
                 </div>
             `;
+
+            // Ajouter l'écouteur de clic pour ouvrir la modal
+            timelineItem.addEventListener('click', () => {
+                // Effet de zoom temporaire
+                document.querySelectorAll('.timeline-item').forEach(item => {
+                    item.classList.remove('highlight');
+                });
+                timelineItem.classList.add('highlight');
+
+                // Ouvrir la modal après un court délai pour voir l'effet
+                setTimeout(() => {
+                    timelineItem.classList.remove('highlight');
+                    if (typeof openExperienceModal === 'function') {
+                        openExperienceModal(exp.id);
+                    }
+                }, 400);
+            });
+
             timeline.appendChild(timelineItem);
         });
     };

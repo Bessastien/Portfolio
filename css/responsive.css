@@ -4,17 +4,21 @@
 @media (max-width: 768px) {
     /* Terminal */
     .terminal-content {
-        font-size: 14px;
+        font-size: 13px;
         padding: 15px;
+        min-height: 250px;
+        background: rgba(0, 0, 0, 0.75);
     }
 
     .terminal-wrapper {
         width: 95%;
         max-width: none;
+        background: rgba(69, 67, 67, 0.95);
     }
 
     .terminal-header {
         padding: 10px 12px;
+        background: linear-gradient(180deg, rgba(69, 67, 67, 0.6), rgba(58, 56, 56, 0.95));
     }
 
     .terminal-btn {
@@ -24,12 +28,6 @@
 
     .terminal-title {
         font-size: 10px;
-    }
-
-    .terminal-content {
-        font-size: 13px;
-        padding: 15px;
-        min-height: 250px;
     }
 
     /* Navigation */
@@ -46,6 +44,7 @@
     /* Hero */
     .hero {
         padding: 5rem 1.5rem 2rem;
+        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
     }
 
     .hero-content {
@@ -68,6 +67,7 @@
     /* Projets */
     .projects {
         padding: 3rem 1.5rem 2rem;
+        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
     }
 
     .projects-grid {
@@ -83,6 +83,7 @@
     /* Parcours */
     .parcours {
         padding: 3rem 1.5rem 2rem;
+        background: var(--color-bg);
     }
 
     .timeline {
@@ -117,6 +118,7 @@
     /* Compétences */
     .skills {
         padding: 3rem 1.5rem 2rem;
+        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
     }
 
     .skills-carousel {
@@ -145,6 +147,7 @@
     /* Footer */
     .footer {
         padding: 3rem 1.5rem 2rem;
+        background: var(--color-bg-alt);
     }
 
     .footer-links {
@@ -162,4 +165,3 @@
         font-size: 0.9rem;
     }
 }
-
