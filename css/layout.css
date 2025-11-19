@@ -130,3 +130,32 @@
     width: 18px;
     height: 18px;
 }
+
+/* Full width nav sur petits écrans */
+@media (max-width: 768px) {
+  .nav {
+    max-width: none;
+    width: 100%;
+    padding: 0 0.75rem; /* Réduit les marges latérales pour gagner de l'espace */
+    justify-content: space-between; /* Répartir les éléments sur toute la largeur */
+    gap: 0.5rem;
+  }
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+  .header {
+    padding: 0.9rem 0; /* Réduction de la hauteur pour limiter la perte d'espace vertical */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 0.5rem;
+  }
+  .header {
+    padding: 0.7rem 0;
+  }
+}

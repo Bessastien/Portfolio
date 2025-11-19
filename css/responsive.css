@@ -32,18 +32,18 @@
 
     /* Navigation */
     .nav {
-        justify-content: center;
+        justify-content: space-between;
         gap: 0.5rem;
         padding: 0 0.5rem;
     }
 
     .nav-actions {
         gap: 0.5rem;
+        width: 100%;
     }
 
     .nav-link {
         font-size: 0.75rem;
-        /* Masquer le texte "///" sur très petits écrans */
     }
 
     /* Bouton de thème : icône uniquement sur mobile */
@@ -81,8 +81,6 @@
         height: 18px;
     }
 
-    /* Le cercle est géré par JavaScript (détection tactile) */
-
     /* Projets */
     .projects {
         padding: 3rem 1.5rem 2rem;
@@ -98,7 +96,6 @@
         padding: 1.5rem;
     }
 
-
     /* Parcours */
     .parcours {
         padding: 3rem 1.5rem 2rem;
@@ -113,7 +110,6 @@
         left: 0;
     }
 
-    /* Date au-dessus du bloc sur mobile */
     .timeline-date-outside {
         position: static;
         width: auto;
@@ -144,18 +140,9 @@
         gap: 0.5rem;
     }
 
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .carousel-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
     .skills-tags {
         gap: 0.8rem;
+        flex-wrap: wrap;
     }
 
     .skill-tag {
@@ -189,9 +176,8 @@
    TRÈS PETITS ÉCRANS
    =========================== */
 @media (max-width: 480px) {
-    /* Navigation encore plus compacte */
     .header {
-        padding: 1rem 0;
+        padding: 1rem 0; /* déjà ajusté dans layout pour plus bas, gardé ici pour cohérence */
     }
 
     .nav {
@@ -206,12 +192,8 @@
     .nav-link {
         font-size: 0.7rem;
         letter-spacing: 0.3px;
-    }
-
-    /* Utiliser les versions courtes des liens */
-    .nav-link {
         font-weight: 600;
-        font-size: 0;
+        font-size: 0; /* masquer le texte long */
     }
 
     .nav-link::before {
@@ -227,16 +209,13 @@
         font-size: 1rem;
     }
 
-    /* Hero */
     .hero {
         padding: 4.5rem 1rem 2rem;
     }
 
-    /* Sections */
     .projects,
     .skills,
     .parcours {
         padding: 2.5rem 1rem 1.5rem;
     }
 }
-

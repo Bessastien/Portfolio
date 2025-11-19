@@ -1,43 +1,20 @@
 /**
- * CAROUSEL DES COMPÉTENCES
- * Gestion du défilement horizontal avec flèches et filtrage des projets
+ * CAROUSEL / FILTRAGE DES COMPÉTENCES SIMPLIFIÉ
+ * Sur mobile les flèches ont été retirées, on conserve seulement le filtrage + surbrillance temporaire.
  */
 
-let carouselOffset = 0;
-let skillsContainer = null;
-let prevBtn = null;
-let nextBtn = null;
 let allProjects = [];
 let selectedSkill = null;
-let highlightTimeout = null; // Timer pour la surbrillance temporaire
+let highlightTimeout = null;
 
 /**
  * Initialiser le carousel des compétences
  */
 function initSkillsCarousel() {
-    skillsContainer = document.getElementById('skills-container');
-    prevBtn = document.querySelector('.carousel-btn-prev');
-    nextBtn = document.querySelector('.carousel-btn-next');
-
-    if (!skillsContainer || !prevBtn || !nextBtn) {
-        console.warn('Éléments du carousel non trouvés');
-        return;
-    }
-
-    // Sauvegarder tous les projets
+    // Récupérer tous les projets une fois
     allProjects = Array.from(document.querySelectorAll('.project-card'));
-
-    // Initialiser immédiatement et forcer une mise à jour après un court délai
-    updateCarouselButtons();
-    setupCarouselEvents();
     setupSkillClickEvents();
-
-    // Forcer la mise à jour après le rendu complet
-    setTimeout(() => {
-        updateCarouselButtons();
-    }, 100);
-
-    console.log('✅ Carousel activé avec filtrage des projets');
+    console.log('✅ Filtrage des compétences initialisé (sans carousel).');
 }
 
 /**
@@ -133,7 +110,7 @@ function filterProjectsBySkill(skill) {
         });
     }
 
-    // Retirer la surbrillance après 2 secondes
+    // Durée réduite à 800ms (≈ 0.8s) pour retour rapide
     highlightTimeout = setTimeout(() => {
         showAllProjects();
         deselectSkill();
@@ -146,113 +123,9 @@ function filterProjectsBySkill(skill) {
  */
 function showAllProjects() {
     allProjects.forEach(project => {
-        project.classList.remove('highlighted');
-        project.classList.remove('dimmed');
-        project.classList.remove('filtered-in');
+        project.classList.remove('highlighted', 'dimmed', 'filtered-in');
     });
 }
-
-/**
- * Configuration des événements du carousel
- */
-function setupCarouselEvents() {
-    prevBtn.addEventListener('click', () => scrollCarousel('prev'));
-    nextBtn.addEventListener('click', () => scrollCarousel('next'));
-
-    // Support du swipe tactile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    skillsContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    skillsContainer.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        if (touchEndX < touchStartX - swipeThreshold) {
-            scrollCarousel('next');
-        }
-        if (touchEndX > touchStartX + swipeThreshold) {
-            scrollCarousel('prev');
-        }
-    }
-
-    // Support du clavier
-    document.addEventListener('keydown', (e) => {
-        if (document.activeElement.closest('.skills-carousel')) {
-            if (e.key === 'ArrowLeft') scrollCarousel('prev');
-            if (e.key === 'ArrowRight') scrollCarousel('next');
-        }
-    });
-}
-
-/**
- * Faire défiler le carousel
- */
-function scrollCarousel(direction) {
-    const container = skillsContainer.parentElement;
-    const containerWidth = container.offsetWidth;
-    const scrollAmount = containerWidth * 0.7; // Défiler 70% de la largeur visible
-
-    if (direction === 'next') {
-        carouselOffset -= scrollAmount;
-    } else {
-        carouselOffset += scrollAmount;
-    }
-
-    // Limiter le défilement
-    const maxOffset = 0;
-    const minOffset = -(skillsContainer.scrollWidth - containerWidth);
-
-    carouselOffset = Math.max(minOffset, Math.min(maxOffset, carouselOffset));
-
-    // Appliquer la transformation
-    skillsContainer.style.transform = `translateX(${carouselOffset}px)`;
-
-    updateCarouselButtons();
-}
-
-/**
- * Mettre à jour l'état des boutons
- */
-function updateCarouselButtons() {
-    if (!skillsContainer || !prevBtn || !nextBtn) return;
-
-    const container = skillsContainer.parentElement;
-    const containerWidth = container.offsetWidth;
-    const contentWidth = skillsContainer.scrollWidth;
-
-    // Désactiver les boutons si pas besoin de défiler
-    if (contentWidth <= containerWidth) {
-        prevBtn.disabled = true;
-        nextBtn.disabled = true;
-        return;
-    }
-
-    // Bouton précédent
-    prevBtn.disabled = carouselOffset >= 0;
-
-    // Bouton suivant
-    const minOffset = -(contentWidth - containerWidth);
-    nextBtn.disabled = carouselOffset <= minOffset;
-}
-
-/**
- * Réinitialiser le carousel au redimensionnement
- */
-window.addEventListener('resize', () => {
-    if (skillsContainer) {
-        carouselOffset = 0;
-        skillsContainer.style.transform = 'translateX(0)';
-        updateCarouselButtons();
-    }
-});
 
 // Exposer la fonction globalement
 window.initSkillsCarousel = initSkillsCarousel;
-
