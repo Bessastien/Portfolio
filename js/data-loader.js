@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        let firstHighlightedElement = null;
+
         // Filtrer les projets
         document.querySelectorAll('.project-card').forEach(card => {
             const projectId = card.dataset.projectId;
@@ -154,6 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (project && project.technologies.includes(selectedSkill)) {
                 card.classList.add('skill-filtered');
                 card.classList.remove('skill-dimmed');
+                if (!firstHighlightedElement) {
+                    firstHighlightedElement = card;
+                }
             } else {
                 card.classList.remove('skill-filtered');
                 card.classList.add('skill-dimmed');
@@ -167,11 +172,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (experience && experience.skills.includes(selectedSkill)) {
                 item.classList.add('skill-filtered');
                 item.classList.remove('skill-dimmed');
+                if (!firstHighlightedElement) {
+                    firstHighlightedElement = item;
+                }
             } else {
                 item.classList.remove('skill-filtered');
                 item.classList.add('skill-dimmed');
             }
         });
+
+        // Défiler vers le premier élément illuminé
+        if (firstHighlightedElement) {
+            setTimeout(() => {
+                firstHighlightedElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }, 100);
+        }
 
         // Définir un minuteur pour tout réinitialiser après 1 seconde
         skillFilterTimeout = setTimeout(() => {
