@@ -14,7 +14,6 @@ function initSkillsCarousel() {
     // Récupérer tous les projets une fois
     allProjects = Array.from(document.querySelectorAll('.project-card'));
     setupSkillClickEvents();
-    console.log('✅ Filtrage des compétences initialisé (sans carousel).');
 }
 
 /**

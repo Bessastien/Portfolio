@@ -124,7 +124,7 @@
       "title": "SAE 2.03 - Services Réseau",
       "language": "Réseau",
       "shortDescription": "Déploiement de services réseau critiques : DHCP, DNS, Web. Configuration et sécurisation sous Linux.",
-      "description": "SAE (Situation d'Apprentissage et d'Évaluation) centrée sur l'installation et la configuration de services réseau essentiels. Déploiement de serveurs DHCP, DNS et Web sous Linux avec redondance, sécurisation et documentation complète.",
+      "description": "SAE (Situation d'Apprentissage et d'Évaluation) centrée sur l'installation et la configuration de services réseau essentiels grave à KATHARA. Déploiement de serveurs DHCP, DNS et Web sous Linux avec redondance, sécurisation et documentation complète.",
       "technologies": ["Ubuntu", "DHCP", "DNS", "Apache", "Services réseau"],
       "features": [
         "Installation et configuration de serveur DHCP",
@@ -136,7 +136,6 @@
         "Tests de validation et monitoring",
         "Documentation technique exhaustive"
       ],
-      "images": ["assets/img/projects/sae203.png"],
       "github": "https://github.com/Bessastien/sae2.03"
     }
   ]
