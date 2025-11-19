@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             populateHero(profile);
             populateProjects(projectsData.projects);
             populateExperiences(experiencesData.experiences);
-            populateSkills(skillsData.skills);
+            populateSkills(skillsData, projectsData.projects, experiencesData.experiences);
             populateFooter(profile);
 
         } catch (error) {
@@ -115,15 +115,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const populateSkills = (skills) => {
-        const skillsContainer = document.getElementById('skills-container');
-        skillsContainer.innerHTML = '';
-        skills.forEach(skill => {
+    const populateSkills = (skillsData, projects, experiences) => {
+        const hardSkillsContainer = document.getElementById('hard-skills-container');
+        const softSkillsContainer = document.getElementById('soft-skills-container');
+
+        hardSkillsContainer.innerHTML = '';
+        softSkillsContainer.innerHTML = '';
+
+        const createSkillTag = (skill, container) => {
             const skillTag = document.createElement('span');
             skillTag.className = 'skill-tag';
             skillTag.textContent = skill;
-            skillsContainer.appendChild(skillTag);
+            skillTag.addEventListener('click', () => handleSkillClick(skill, projects, experiences));
+            container.appendChild(skillTag);
+        };
+
+        skillsData.hardSkills.forEach(skill => createSkillTag(skill, hardSkillsContainer));
+        skillsData.softSkills.forEach(skill => createSkillTag(skill, softSkillsContainer));
+    };
+
+    let skillFilterTimeout;
+
+    const handleSkillClick = (selectedSkill, projects, experiences) => {
+        clearTimeout(skillFilterTimeout); // Annule le minuteur précédent s'il existe
+
+        const allSkillTags = document.querySelectorAll('.skill-tag');
+        allSkillTags.forEach(tag => {
+            tag.classList.remove('selected');
+            if (tag.textContent === selectedSkill) {
+                tag.classList.add('selected');
+            }
         });
+
+        // Filtrer les projets
+        document.querySelectorAll('.project-card').forEach(card => {
+            const projectId = card.dataset.projectId;
+            const project = projects.find(p => p.id == projectId);
+            if (project && project.technologies.includes(selectedSkill)) {
+                card.classList.add('skill-filtered');
+                card.classList.remove('skill-dimmed');
+            } else {
+                card.classList.remove('skill-filtered');
+                card.classList.add('skill-dimmed');
+            }
+        });
+
+        // Filtrer les expériences
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            const experienceId = item.dataset.experienceId;
+            const experience = experiences.find(e => e.id == experienceId);
+            if (experience && experience.skills.includes(selectedSkill)) {
+                item.classList.add('skill-filtered');
+                item.classList.remove('skill-dimmed');
+            } else {
+                item.classList.remove('skill-filtered');
+                item.classList.add('skill-dimmed');
+            }
+        });
+
+        // Définir un minuteur pour tout réinitialiser après 1 seconde
+        skillFilterTimeout = setTimeout(() => {
+            allSkillTags.forEach(tag => tag.classList.remove('selected'));
+            document.querySelectorAll('.project-card, .timeline-item').forEach(el => {
+                el.classList.remove('skill-filtered', 'skill-dimmed');
+            });
+        }, 1000);
     };
 
     const populateFooter = (profile) => {

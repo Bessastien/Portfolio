@@ -1,5 +1,5 @@
 {
-  "skills": [
+  "hardSkills": [
     "PHP 8",
     "Java",
     "Python",
@@ -8,19 +8,24 @@
     "HTML/CSS/JS",
     "JavaFX",
     "Architecture MVC",
-    "Architecture modulaire",
     "POO",
     "Algorithmique",
     "Cryptographie",
-    "Simulation",
-    "Virtualisation",
-    "VLANs",
     "Services réseau",
-    "Configuration système",
     "DHCP",
     "DNS",
     "Apache",
     "Design responsive"
+  ],
+  "softSkills": [
+    "Travail d'équipe",
+    "Communication",
+    "Résolution de problèmes",
+    "Adaptabilité",
+    "Gestion du temps",
+    "Autonomie",
+    "Curiosité",
+    "Esprit critique"
   ]
 }
 
