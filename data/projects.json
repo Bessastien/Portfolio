@@ -121,11 +121,11 @@
     },
     {
       "id": 7,
-      "title": "SAE 2.03 - Services Réseau",
-      "language": "Réseau",
-      "shortDescription": "Déploiement de services réseau critiques : DHCP, DNS, Web. Configuration et sécurisation sous Linux.",
-      "description": "SAE (Situation d'Apprentissage et d'Évaluation) centrée sur l'installation et la configuration de services réseau essentiels. Déploiement de serveurs DHCP, DNS et Web sous Linux avec redondance, sécurisation et documentation complète.",
-      "technologies": ["Ubuntu", "DHCP", "DNS", "Apache", "Services réseau"],
+      "title": "SAE 2.03 - Services réseaux",
+      "language": "réseaux",
+      "shortDescription": "Déploiements de services réseaux critiques : DHCP, DNS, Web. Configuration et sécurisation sous Linux.",
+      "description": "SAE (Situation d'Apprentissage et d'Évaluation) centrée sur l'installation et la configuration de services réseaux essentiels. Déploiement de serveurs DHCP, DNS et Web sous Linux avec redondance, sécurisation et documentation complète.",
+      "technologies": ["Ubuntu", "DHCP", "DNS", "Apache", "Services réseaux"],
       "features": [
         "Installation et configuration de serveur DHCP",
         "Mise en place de serveur DNS (résolution de noms)",
