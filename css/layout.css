@@ -217,7 +217,7 @@
         right: 0;
         flex-direction: column;
         gap: 0;
-        background: rgba(0, 0, 0, 0.98);
+        background: var(--color-bg);
         backdrop-filter: blur(20px);
         padding: 0;
         margin: 0;
@@ -226,6 +226,7 @@
         opacity: 0;
         transition: max-height 0.4s ease, opacity 0.3s ease;
         border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .nav-actions.active {
@@ -237,7 +238,7 @@
         width: 100%;
         padding: 1.2rem 1.5rem;
         font-size: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid var(--color-border);
         text-align: left;
     }
 
@@ -246,7 +247,8 @@
     }
 
     .nav-link:hover {
-        background: rgba(255, 255, 255, 0.05);
+        background: var(--color-surface);
+        color: var(--accent-primary);
     }
 
     .theme-toggle {
