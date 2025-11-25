@@ -59,7 +59,6 @@ Portfolio/
 └── js/                     # Scripts modulaires
     ├── carousel.js        # Carousel de compétences
     ├── data-loader.js     # Chargement et affichage des données
-    ├── hero.js            # Animations section hero
     ├── main.js            # Orchestration principale
     ├── matrix.js          # Effet Matrix d'arrière-plan
     ├── modal.js           # Gestion des modales
