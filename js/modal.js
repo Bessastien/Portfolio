@@ -79,6 +79,50 @@ function openProjectModal(projectId) {
         featuresContainer.style.display = 'none';
     }
 
+    // Compétences BUT
+    const competencesContainer = document.getElementById('modal-competences-container');
+    if (project.competences && Object.keys(project.competences).length > 0) {
+        competencesContainer.style.display = 'block';
+        const competencesDiv = document.getElementById('modal-competences');
+        competencesDiv.innerHTML = '';
+
+        Object.entries(project.competences).forEach(([code, comp]) => {
+            const compCard = document.createElement('div');
+            compCard.className = 'competence-card';
+
+            const compHeader = document.createElement('div');
+            compHeader.className = 'competence-header';
+
+            const compCode = document.createElement('span');
+            compCode.className = 'competence-code';
+            compCode.textContent = code;
+
+            const compLevel = document.createElement('span');
+            compLevel.className = `competence-level level-${comp.niveau_estime}`;
+            const levelText = ['', 'Initiation', 'Maîtrise partielle', 'Autonomie', 'Maîtrise avancée'];
+            compLevel.textContent = `Niveau ${comp.niveau_estime} - ${levelText[comp.niveau_estime]}`;
+
+            compHeader.appendChild(compCode);
+            compHeader.appendChild(compLevel);
+
+            const compIndicator = document.createElement('p');
+            compIndicator.className = 'competence-indicator';
+            compIndicator.textContent = comp.indicateur;
+
+            const compProof = document.createElement('p');
+            compProof.className = 'competence-proof';
+            compProof.innerHTML = `<strong>Preuve :</strong> ${comp.preuve_possible}`;
+
+            compCard.appendChild(compHeader);
+            compCard.appendChild(compIndicator);
+            compCard.appendChild(compProof);
+
+            competencesDiv.appendChild(compCard);
+        });
+    } else {
+        competencesContainer.style.display = 'none';
+    }
+
     // Liens
     const githubLink = document.getElementById('modal-github-link');
 
