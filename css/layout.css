@@ -44,9 +44,75 @@
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: flex-end;
-    gap: 2.5rem;
+    justify-content: space-between;
     align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: none;
+}
+
+/* Menu hamburger - caché sur desktop */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger {
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+/* Animation du hamburger en X */
+.mobile-menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.mobile-menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
 }
 
 .nav-actions {
@@ -54,10 +120,6 @@
     align-items: center;
     gap: 1rem;
     margin-left: auto;
-}
-
-.nav-actions .nav-link {
-    margin-left: 0;
 }
 
 .nav-link {
@@ -105,7 +167,6 @@
 }
 
 .theme-toggle {
-    margin-left: auto;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -131,31 +192,95 @@
     height: 18px;
 }
 
-/* Full width nav sur petits écrans */
+/* Menu mobile */
 @media (max-width: 768px) {
-  .nav {
-    max-width: none;
-    width: 100%;
-    padding: 0 0.75rem; /* Réduit les marges latérales pour gagner de l'espace */
-    justify-content: space-between; /* Répartir les éléments sur toute la largeur */
-    gap: 0.5rem;
-  }
-  .nav-actions {
-    width: 100%;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-left: 0;
-  }
-  .header {
-    padding: 0.9rem 0; /* Réduction de la hauteur pour limiter la perte d'espace vertical */
-  }
+    .header {
+        padding: 0.75rem 0;
+    }
+
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .nav-logo {
+        display: block;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-actions {
+        position: fixed;
+        top: 57px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-actions.active {
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: left;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .theme-toggle {
+        width: calc(100% - 3rem);
+        margin: 1rem 1.5rem;
+        justify-content: center;
+    }
+
+    .theme-toggle-text {
+        display: inline;
+    }
 }
 
 @media (max-width: 480px) {
-  .nav {
-    padding: 0 0.5rem;
-  }
-  .header {
-    padding: 0.7rem 0;
-  }
+    .header {
+        padding: 0.6rem 0;
+    }
+
+    .nav {
+        padding: 0 0.75rem;
+    }
+
+    .nav-actions {
+        top: 50px;
+    }
+
+    .mobile-menu-toggle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        width: 22px;
+    }
 }

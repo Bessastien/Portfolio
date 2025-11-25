@@ -26,6 +26,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Initialiser le thème
     initThemeToggle();
+
+    // Initialiser le menu mobile
+    initMobileMenu();
 });
 
 /**
@@ -50,6 +53,42 @@ function initFlipCard() {
     // Sur mobile/tactile : toggle au clic
     flipCard.addEventListener('click', () => {
         flipCard.classList.toggle('flipped');
+    });
+}
+
+/**
+ * MENU MOBILE HAMBURGER
+ */
+function initMobileMenu() {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navActions = document.getElementById('nav-actions');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (!menuToggle || !navActions) return;
+
+    // Toggle du menu
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navActions.classList.toggle('active');
+        document.body.style.overflow = navActions.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Fermer le menu lors du clic sur un lien
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navActions.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Fermer le menu lors du redimensionnement vers desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            menuToggle.classList.remove('active');
+            navActions.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     });
 }
 

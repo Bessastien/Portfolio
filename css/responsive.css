@@ -44,35 +44,7 @@
         font-size: 10px;
     }
 
-    /* Navigation */
-    .nav {
-        justify-content: space-between;
-        gap: 0.5rem;
-        padding: 0 0.5rem;
-    }
 
-    .nav-actions {
-        gap: 0.5rem;
-        width: 100%;
-    }
-
-    .nav-link {
-        font-size: 0.75rem;
-    }
-
-    /* Bouton de thème : icône uniquement sur mobile */
-    .theme-toggle {
-        padding: 0.4rem;
-        min-width: auto;
-    }
-
-    .theme-toggle-text {
-        display: none;
-    }
-
-    .theme-toggle-icon {
-        font-size: 1.1rem;
-    }
 
     /* Hero */
     .hero {
@@ -205,38 +177,6 @@
    TRÈS PETITS ÉCRANS
    =========================== */
 @media (max-width: 480px) {
-    .header {
-        padding: 1rem 0; /* déjà ajusté dans layout pour plus bas, gardé ici pour cohérence */
-    }
-
-    .nav {
-        gap: 0.3rem;
-        padding: 0 0.3rem;
-    }
-
-    .nav-actions {
-        gap: 0.3rem;
-    }
-
-    .nav-link {
-        font-size: 0.7rem;
-        letter-spacing: 0.3px;
-        font-weight: 600;
-        font-size: 0; /* masquer le texte long */
-    }
-
-    .nav-link::before {
-        content: attr(data-short);
-        font-size: 0.7rem;
-    }
-
-    .theme-toggle {
-        padding: 0.3rem;
-    }
-
-    .theme-toggle-icon {
-        font-size: 1rem;
-    }
 
     .hero {
         padding: 4.5rem 1rem 2rem;
