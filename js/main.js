@@ -35,7 +35,23 @@ window.addEventListener('contentVisible', () => {
     if (window.initSkillsCarousel) {
         window.initSkillsCarousel();
     }
+
+    // Initialiser l'effet flip de la carte sur mobile
+    initFlipCard();
 });
+
+/**
+ * EFFET FLIP DE LA CARTE PROFIL
+ */
+function initFlipCard() {
+    const flipCard = document.getElementById('hero-flip-card');
+    if (!flipCard) return;
+
+    // Sur mobile/tactile : toggle au clic
+    flipCard.addEventListener('click', () => {
+        flipCard.classList.toggle('flipped');
+    });
+}
 
 /**
  * SMOOTH SCROLL POUR LA NAVIGATION

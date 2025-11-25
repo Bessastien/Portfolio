@@ -15,10 +15,19 @@
     max-width: 1200px;
     width: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    position: relative;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-    position: relative;
 }
 
 .hero-title {
@@ -109,3 +118,59 @@
         transform: translateY(-10px) rotate(5deg);
     }
 }
+
+/* Image de profil avec effet flip */
+.hero-image-container {
+    flex-shrink: 0;
+    perspective: 1000px;
+}
+
+.flip-card {
+    width: 350px;
+    height: 350px;
+    cursor: pointer;
+    position: relative;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Sur desktop : hover pour flip */
+@media (hover: hover) and (pointer: fine) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-accent), 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--color-border-strong);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.hero-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
