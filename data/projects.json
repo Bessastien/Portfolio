@@ -21,12 +21,12 @@
       "competences": {
         "C1": {
           "indicateur": "Concevoir, coder et tester une application web complète (MVC, authentification, CRUD)",
-          "niveau_estime": 4,
+          "niveau_estime": 2,
           "preuve_possible": "Code source GitHub, rapport technique, démonstration fonctionnelle"
         },
         "C4": {
           "indicateur": "Modéliser et interroger une base de données MySQL (schéma, relations, requêtes)",
-          "niveau_estime": 4,
+          "niveau_estime": 2,
           "preuve_possible": "Script SQL de création, schéma de la BD, scripts de migration et requêtes utilisées"
         }
       }
@@ -52,7 +52,7 @@
       "competences": {
         "C1": {
           "indicateur": "Concevoir et implémenter une application interactive (GUI, logique de jeu)",
-          "niveau_estime": 4,
+          "niveau_estime": 3,
           "preuve_possible": "Code source, démonstration, tests de règles du jeu"
         },
         "C2": {
@@ -83,7 +83,7 @@
       "competences": {
         "C2": {
           "indicateur": "Mettre en œuvre et optimiser des algorithmes d'analyse (Kasiski, fréquentielle)",
-          "niveau_estime": 4,
+          "niveau_estime": 3,
           "preuve_possible": "Comparaison performances, explications des choix algorithmiques dans la documentation"
         }
       }
@@ -142,12 +142,12 @@
       "competences": {
         "C1": {
           "indicateur": "Concevoir et implémenter une simulation en POO",
-          "niveau_estime": 3,
+          "niveau_estime": 2,
           "preuve_possible": "Code source, documentation des classes et simulation démontrée"
         },
         "C2": {
           "indicateur": "Implémenter et optimiser des comportements algorithmiques (déplacements, reproduction)",
-          "niveau_estime": 4,
+          "niveau_estime": 3,
           "preuve_possible": "Explications algorithmiques et comparatifs simples de paramétrage"
         }
       }
@@ -176,7 +176,7 @@
       "competences": {
         "C1": {
           "indicateur": "Concevoir, coder et tester une application web interactive complète",
-          "niveau_estime": 4,
+          "niveau_estime": 3,
           "preuve_possible": "Code source, démonstration en ligne, documentation technique"
         },
         "C5": {
@@ -213,12 +213,12 @@
       "competences": {
         "C3": {
           "indicateur": "Installer, configurer et sécuriser un système/service sous Linux",
-          "niveau_estime": 4,
+          "niveau_estime": 2,
           "preuve_possible": "Scripts d'installation, documentation, démonstration et tests de sécurité"
         },
         "C5": {
           "indicateur": "Conduite du projet SAE : planification, tests et documentation",
-          "niveau_estime": 3,
+          "niveau_estime": 2,
           "preuve_possible": "Livrables SAE, planning, rapports et documentation technique"
         },
         "C6": {
