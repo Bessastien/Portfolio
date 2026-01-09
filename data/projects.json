@@ -1,6 +1,35 @@
 {
   "projects": [
     {
+      "id": 8,
+      "title": "Application Métier (Legrand)",
+      "language": "Web Fullstack",
+      "shortDescription": "Solution interne sécurisée : Interface VueJS/TypeScript et API Express. Contexte industriel et confidentiel.",
+      "description": "Conception et développement d'une application web métier dans le cadre d'un partenariat entreprise. Architecture Fullstack séparant le frontend (VueJS + TypeScript) du backend (Node.js/Express). L'accent a été mis sur la sécurité des données, la robustesse de l'API et l'intégration fluide au système d'information existant. Projet réalisé avec des contraintes professionnelles strictes.",
+      "technologies": ["VueJS 3", "TypeScript", "Node.js", "Express", "API REST", "Sécurité"],
+      "features": [
+        "Développement Frontend réactif avec VueJS 3 et TypeScript",
+        "Architecture Backend robuste via Express et Node.js",
+        "Conception d'une API REST sécurisée",
+        "Intégration au système d'information de l'entreprise",
+        "Gestion stricte de la confidentialité et des accès",
+        "Respect des standards de code industriels",
+        "Travail en équipe et respect des délais"
+      ],
+      "competences": {
+        "C1": {
+          "indicateur": "Concevoir et développer une solution Fullstack complexe et sécurisée",
+          "niveau_estime": 3,
+          "preuve_possible": "Attestation de stage/projet, démonstration technique (hors données confidentielles)"
+        },
+        "C6": {
+          "indicateur": "Collaborer dans un contexte professionnel avec contraintes industrielles",
+          "niveau_estime": 3,
+          "preuve_possible": "Livrables respectant les normes de l'entreprise, intégration réussie"
+        }
+      }
+    },
+    {
       "id": 1,
       "title": "La Cosina",
       "language": "PHP",
@@ -11,7 +40,7 @@
         "Architecture MVC développée from scratch",
         "Système complet de gestion des utilisateurs (inscription, connexion, authentification)",
         "CRUD complet pour les recettes de cuisine",
-        "Système de commentaires et de favoris",
+        "Système de commentaires et de favoris",  
         "Sécurisation avancée : requêtes SQL préparées (PDO)",
         "Validation et sanitisation des formulaires",
         "Interface responsive et intuitive"
@@ -208,7 +237,6 @@
         "Tests de validation et monitoring",
         "Documentation technique exhaustive"
       ],
-      "images": ["assets/img/projects/sae203.png"],
       "github": "https://github.com/Bessastien/sae2.03",
       "competences": {
         "C3": {
