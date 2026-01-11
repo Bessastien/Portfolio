@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const populateHero = (profile) => {
         document.getElementById('hero-name').textContent = profile.personal.name.split(' ')[0];
-        document.getElementById('hero-subtitle').textContent = profile.personal.hero_subtitle;
+        document.getElementById('hero-subtitle').innerHTML = profile.personal.hero_subtitle;
     };
 
     const populateProjects = (projects) => {
