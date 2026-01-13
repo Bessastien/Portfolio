@@ -125,13 +125,22 @@ function openProjectModal(projectId) {
 
     // Liens
     const githubLink = document.getElementById('modal-github-link');
+    const siteLink = document.getElementById('modal-site-link');
 
     if (project.github) {
         githubLink.href = project.github;
-        githubLink.classList.remove('disabled');
+        githubLink.style.display = 'flex';
     } else {
         githubLink.href = '#';
-        githubLink.classList.add('disabled');
+        githubLink.style.display = 'none';
+    }
+
+    if (project.url) {
+        siteLink.href = project.url;
+        siteLink.style.display = 'flex';
+    } else {
+        siteLink.href = '#';
+        siteLink.style.display = 'none';
     }
 
 

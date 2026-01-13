@@ -1,12 +1,55 @@
 {
   "projects": [
     {
+      "id": 9,
+      "title": "Nuit de l'Info 2025",
+      "language": "Web Fullstack",
+      "shortDescription": "Réalisation d'un site web en une nuit pour l'événement 'La nuit de l'info 2025'.",
+      "description": "Réalisation d'un site web en groupe de 8 avec VueJS 3 (HTML/CSS/JS) en une nuit pour l'événement 'La nuit de l'info 2025'. Utilisation de l'outil Vite.js pour structurer la page. Hébergement du projet sur Github. Site disponible sur nuitdelinfo.bessastien.fr.",
+      "technologies": [
+        "VueJS 3",
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Vite.js"
+      ],
+      "features": [
+        "Développement web rapide en équipe",
+        "Utilisation de VueJS 3 et Vite.js",
+        "Hébergement personnalisé"
+      ],
+      "images": [
+        "assets/img/projects/nird.png"
+      ],
+      "github": "https://github.com/Quoicouteam/Nird",
+      "url": "https://nuitdelinfo.bessastien.fr",
+      "competences": {
+        "C1": {
+          "indicateur": "Réaliser un développement Web complet (VueJS 3) en temps limité",
+          "niveau_estime": 3,
+          "preuve_possible": "Site web fonctionnel, code source"
+        },
+        "C6": {
+          "indicateur": "Travailler en équipe de 8 sur un délai court",
+          "niveau_estime": 3,
+          "preuve_possible": "Commit history, répartition des tâches"
+        }
+      }
+    },
+    {
       "id": 8,
       "title": "Application Métier (Legrand)",
       "language": "Web Fullstack",
       "shortDescription": "Solution interne sécurisée : Interface VueJS/TypeScript et API Express. Contexte industriel et confidentiel.",
       "description": "Conception et développement d'une application web métier dans le cadre d'un partenariat entreprise. Architecture Fullstack séparant le frontend (VueJS + TypeScript) du backend (Node.js/Express). L'accent a été mis sur la sécurité des données, la robustesse de l'API et l'intégration fluide au système d'information existant. Projet réalisé avec des contraintes professionnelles strictes.",
-      "technologies": ["VueJS 3", "TypeScript", "Node.js", "Express", "API REST", "Sécurité"],
+      "technologies": [
+        "VueJS 3",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "API REST",
+        "Sécurité"
+      ],
       "features": [
         "Développement Frontend réactif avec VueJS 3 et TypeScript",
         "Architecture Backend robuste via Express et Node.js",
@@ -35,17 +78,24 @@
       "language": "PHP",
       "shortDescription": "Site de partage de recettes avec architecture MVC. Gestion complète des utilisateurs, CRUD et sécurisation avancée.",
       "description": "Développement complet d'un site dynamique de partage de recettes. Implémentation d'une architecture MVC from scratch. Fonctionnalités : Gestion des utilisateurs (Inscription/Connexion), CRUD complet des recettes, système de commentaires et gestion des favoris. Sécurisation des formulaires et requêtes SQL préparées.",
-      "technologies": ["PHP 8", "Architecture MVC", "MySQL", "HTML/CSS/JS"],
+      "technologies": [
+        "PHP 8",
+        "Architecture MVC",
+        "MySQL",
+        "HTML/CSS/JS"
+      ],
       "features": [
         "Architecture MVC développée from scratch",
         "Système complet de gestion des utilisateurs (inscription, connexion, authentification)",
         "CRUD complet pour les recettes de cuisine",
-        "Système de commentaires et de favoris",  
+        "Système de commentaires et de favoris",
         "Sécurisation avancée : requêtes SQL préparées (PDO)",
         "Validation et sanitisation des formulaires",
         "Interface responsive et intuitive"
       ],
-      "images": ["assets/img/projects/lacosina_home.png"],
+      "images": [
+        "assets/img/projects/lacosina_home.png"
+      ],
       "github": "https://github.com/Bessastien/lacosina",
       "competences": {
         "C1": {
@@ -66,7 +116,12 @@
       "language": "Java",
       "shortDescription": "Jeu de société numérique avec interface JavaFX. Drag & Drop, Design Patterns et architecture MVC.",
       "description": "Développement d'une version numérique du jeu de société Latice. Conception d'une interface graphique interactive (GUI) avec gestion complexe d'événements (Drag & Drop). Application des patrons de conception (Design Patterns) et séparation Modèle-Vue-Contrôleur.",
-      "technologies": ["Java", "JavaFX", "Architecture MVC", "POO"],
+      "technologies": [
+        "Java",
+        "JavaFX",
+        "Architecture MVC",
+        "POO"
+      ],
       "features": [
         "Interface graphique interactive développée en JavaFX",
         "Implémentation du moteur de règles du jeu Latice",
@@ -76,7 +131,9 @@
         "Validation automatique des coups selon les règles",
         "Interface utilisateur fluide et responsive"
       ],
-      "images": ["assets/img/projects/latice_game.png"],
+      "images": [
+        "assets/img/projects/latice_game.png"
+      ],
       "github": "https://github.com/Bessastien/latice",
       "competences": {
         "C1": {
@@ -97,7 +154,11 @@
       "language": "Python",
       "shortDescription": "Outils de cryptographie : chiffrement/déchiffrement Vigenère. Attaque de Kasiski et analyse fréquentielle.",
       "description": "Création d'outils pour chiffrer, déchiffrer et casser le code de Vigenère. Implémentation de l'attaque de Kasiski pour déduire la longueur de la clé sans la connaître, et analyse fréquentielle pour retrouver le message clair. Interface console interactive.",
-      "technologies": ["Python", "Algorithmique", "Cryptographie"],
+      "technologies": [
+        "Python",
+        "Algorithmique",
+        "Cryptographie"
+      ],
       "features": [
         "Implémentation du chiffrement de Vigenère",
         "Déchiffrement avec clé connue",
@@ -107,7 +168,9 @@
         "Interface console interactive et intuitive",
         "Documentation complète des algorithmes"
       ],
-      "images": ["assets/img/projects/crypto_tool.png"],
+      "images": [
+        "assets/img/projects/crypto_tool.png"
+      ],
       "github": "https://github.com/Bessastien/Vigenere_Kasiski_Console",
       "competences": {
         "C2": {
@@ -123,7 +186,11 @@
       "language": "Python",
       "shortDescription": "Suite de jeux classiques (Morpion, Puissance 4, Allumettes) avec IA et gestion des scores.",
       "description": "Développement modulaire d'une suite de jeux classiques (Morpion, Puissance 4, Allumettes). Gestion centralisée des scores, intelligence artificielle basique pour le mode solo et validation robuste des entrées utilisateurs.",
-      "technologies": ["Python", "POO", "Algorithmique"],
+      "technologies": [
+        "Python",
+        "POO",
+        "Algorithmique"
+      ],
       "features": [
         "Jeu de Morpion avec mode 2 joueurs et IA",
         "Puissance 4 avec détection de victoire optimisée",
@@ -134,7 +201,9 @@
         "Validation robuste des entrées utilisateurs",
         "Menu principal unifié et navigation intuitive"
       ],
-      "images": ["assets/img/projects/minigames_menu.png"],
+      "images": [
+        "assets/img/projects/minigames_menu.png"
+      ],
       "github": "https://github.com/Bessastien/Mini-jeux-Interactifs",
       "competences": {
         "C1": {
@@ -155,7 +224,11 @@
       "language": "Python",
       "shortDescription": "Simulation prédateur-proie (Loups/Moutons) en POO. Reproduction, prédation et équilibre écologique.",
       "description": "Simulation d'un écosystème (Loups vs Moutons) sur une grille. Utilisation de la Programmation Orientée Objet pour gérer les comportements : reproduction, prédation, faim et déplacement. Visualisation en console.",
-      "technologies": ["Python", "POO", "Simulation"],
+      "technologies": [
+        "Python",
+        "POO",
+        "Simulation"
+      ],
       "features": [
         "Simulation d'écosystème prédateur-proie (Loups/Moutons)",
         "Grille de simulation configurable",
@@ -166,7 +239,9 @@
         "Statistiques de population et équilibre écologique",
         "Paramètres ajustables (taux de reproduction, faim, etc.)"
       ],
-      "images": ["assets/img/projects/ecosystem_sim.png"],
+      "images": [
+        "assets/img/projects/ecosystem_sim.png"
+      ],
       "github": "https://github.com/Bessastien/ecosysteme",
       "competences": {
         "C1": {
@@ -187,7 +262,12 @@
       "language": "Web",
       "shortDescription": "Portfolio moderne avec effet terminal, animation Matrix, filtrage dynamique et architecture JavaScript modulaire.",
       "description": "Développement d'un portfolio personnel moderne et interactif avec effet terminal au chargement, animation Matrix, système de filtrage des projets par compétence et modales détaillées. Architecture modulaire JavaScript et design responsive.",
-      "technologies": ["HTML/CSS/JS", "JavaScript", "Architecture modulaire", "Design responsive"],
+      "technologies": [
+        "HTML/CSS/JS",
+        "JavaScript",
+        "Architecture modulaire",
+        "Design responsive"
+      ],
       "features": [
         "Interface utilisateur moderne avec animations fluides",
         "Écran de chargement terminal avec effet de frappe",
@@ -200,7 +280,9 @@
         "Chargement dynamique des données depuis JSON",
         "Thème sombre optimisé pour développeurs"
       ],
-      "images": ["assets/img/projects/portfolio_preview.png"],
+      "images": [
+        "assets/img/projects/portfolio_preview.png"
+      ],
       "github": "https://github.com/Bessastien/Portfolio",
       "competences": {
         "C1": {
@@ -226,7 +308,13 @@
       "language": "Réseau",
       "shortDescription": "Déploiement de services réseau critiques : DHCP, DNS, Web. Configuration et sécurisation sous Linux.",
       "description": "SAE (Situation d'Apprentissage et d'Évaluation) centrée sur l'installation et la configuration de services réseau essentiels. Déploiement de serveurs DHCP, DNS et Web sous Linux avec redondance, sécurisation et documentation complète.",
-      "technologies": ["Ubuntu", "DHCP", "DNS", "Apache", "Services réseau"],
+      "technologies": [
+        "Ubuntu",
+        "DHCP",
+        "DNS",
+        "Apache",
+        "Services réseau"
+      ],
       "features": [
         "Installation et configuration de serveur DHCP",
         "Mise en place de serveur DNS (résolution de noms)",
