@@ -23,18 +23,28 @@
       ],
       "github": "https://github.com/Quoicouteam/Nird",
       "url": "https://nuitdelinfo.bessastien.fr",
-      "competences": {
-        "C1": {
-          "indicateur": "Réaliser un développement Web complet (VueJS 3) en temps limité",
-          "niveau_estime": 3,
-          "preuve_possible": "Site web fonctionnel, code source"
+      "competences": [
+        {
+          "code": "AC16.04",
+          "label": "Acquérir les compétences interpersonnelles pour travailler en équipe"
         },
-        "C6": {
-          "indicateur": "Travailler en équipe de 8 sur un délai court",
-          "niveau_estime": 3,
-          "preuve_possible": "Commit history, répartition des tâches"
+        {
+          "code": "AC11.01",
+          "label": "Implémenter des conceptions simples"
+        },
+        {
+          "code": "AC11.04",
+          "label": "Développer des interfaces utilisateurs"
+        },
+        {
+          "code": "AC21.03",
+          "label": "Adopter de bonnes pratiques de conception et de programmation"
+        },
+        {
+          "code": "AC15.01",
+          "label": "Appréhender les besoins du client et de l'utilisateur"
         }
-      }
+      ]
     },
     {
       "id": 8,
@@ -59,18 +69,28 @@
         "Respect des standards de code industriels",
         "Travail en équipe et respect des délais"
       ],
-      "competences": {
-        "C1": {
-          "indicateur": "Concevoir et développer une solution Fullstack complexe et sécurisée",
-          "niveau_estime": 3,
-          "preuve_possible": "Attestation de stage/projet, démonstration technique (hors données confidentielles)"
+      "competences": [
+        {
+          "code": "AC21.03",
+          "label": "Adopter de bonnes pratiques de conception et de programmation"
         },
-        "C6": {
-          "indicateur": "Collaborer dans un contexte professionnel avec contraintes industrielles",
-          "niveau_estime": 3,
-          "preuve_possible": "Livrables respectant les normes de l'entreprise, intégration réussie"
+        {
+          "code": "AC23.03",
+          "label": "Sécuriser les services et données d’un système"
+        },
+        {
+          "code": "AC24.02",
+          "label": "Assurer la sécurité des données (intégrité et confidentialité)"
+        },
+        {
+          "code": "AC26.04",
+          "label": "Rendre compte de son activité professionnelle"
+        },
+        {
+          "code": "AC25.02",
+          "label": "Formaliser les besoins du client et de l'utilisateur"
         }
-      }
+      ]
     },
     {
       "id": 1,
@@ -97,18 +117,28 @@
         "assets/img/projects/lacosina_home.png"
       ],
       "github": "https://github.com/Bessastien/lacosina",
-      "competences": {
-        "C1": {
-          "indicateur": "Concevoir, coder et tester une application web complète (MVC, authentification, CRUD)",
-          "niveau_estime": 2,
-          "preuve_possible": "Code source GitHub, rapport technique, démonstration fonctionnelle"
+      "competences": [
+        {
+          "code": "AC14.01",
+          "label": "Mettre à jour et interroger une base de données relationnelle"
         },
-        "C4": {
-          "indicateur": "Modéliser et interroger une base de données MySQL (schéma, relations, requêtes)",
-          "niveau_estime": 2,
-          "preuve_possible": "Script SQL de création, schéma de la BD, scripts de migration et requêtes utilisées"
+        {
+          "code": "AC14.03",
+          "label": "Concevoir une base de données relationnelle à partir d’un cahier des charges"
+        },
+        {
+          "code": "AC11.02",
+          "label": "Élaborer des conceptions simples"
+        },
+        {
+          "code": "AC21.03",
+          "label": "Adopter de bonnes pratiques de conception et de programmation"
+        },
+        {
+          "code": "AC11.04",
+          "label": "Développer des interfaces utilisateurs"
         }
-      }
+      ]
     },
     {
       "id": 2,
@@ -135,18 +165,28 @@
         "assets/img/projects/latice_game.png"
       ],
       "github": "https://github.com/Bessastien/latice",
-      "competences": {
-        "C1": {
-          "indicateur": "Concevoir et implémenter une application interactive (GUI, logique de jeu)",
-          "niveau_estime": 3,
-          "preuve_possible": "Code source, démonstration, tests de règles du jeu"
+      "competences": [
+        {
+          "code": "AC11.01",
+          "label": "Implémenter des conceptions simples"
         },
-        "C2": {
-          "indicateur": "Mettre en œuvre des algorithmes efficaces pour la logique du jeu et gestion d'événements",
-          "niveau_estime": 3,
-          "preuve_possible": "Implémentation d'algorithmes (détection victoire, gestion événements), documentation"
+        {
+          "code": "AC11.03",
+          "label": "Faire des essais et évaluer leurs résultats en regard des spécifications"
+        },
+        {
+          "code": "AC11.04",
+          "label": "Développer des interfaces utilisateurs"
+        },
+        {
+          "code": "AC12.01",
+          "label": "Analyser un problème avec méthode"
+        },
+        {
+          "code": "AC21.03",
+          "label": "Adopter de bonnes pratiques de conception et de programmation"
         }
-      }
+      ]
     },
     {
       "id": 3,
@@ -172,13 +212,28 @@
         "assets/img/projects/crypto_tool.png"
       ],
       "github": "https://github.com/Bessastien/Vigenere_Kasiski_Console",
-      "competences": {
-        "C2": {
-          "indicateur": "Mettre en œuvre et optimiser des algorithmes d'analyse (Kasiski, fréquentielle)",
-          "niveau_estime": 3,
-          "preuve_possible": "Comparaison performances, explications des choix algorithmiques dans la documentation"
+      "competences": [
+        {
+          "code": "AC12.01",
+          "label": "Analyser un problème avec méthode"
+        },
+        {
+          "code": "AC12.02",
+          "label": "Comparer des algorithmes pour des problèmes classiques"
+        },
+        {
+          "code": "AC12.03",
+          "label": "Formaliser et mettre en œuvre des outils mathématiques pour l’informatique"
+        },
+        {
+          "code": "AC11.01",
+          "label": "Implémenter des conceptions simples"
+        },
+        {
+          "code": "AC11.03",
+          "label": "Faire des essais et évaluer leurs résultats en regard des spécifications"
         }
-      }
+      ]
     },
     {
       "id": 4,
@@ -205,18 +260,28 @@
         "assets/img/projects/minigames_menu.png"
       ],
       "github": "https://github.com/Bessastien/Mini-jeux-Interactifs",
-      "competences": {
-        "C1": {
-          "indicateur": "Conception et implémentation d'applications ludiques modulaires",
-          "niveau_estime": 3,
-          "preuve_possible": "Code source, démonstration, tests unitaires si présents"
+      "competences": [
+        {
+          "code": "AC11.01",
+          "label": "Implémenter des conceptions simples"
         },
-        "C2": {
-          "indicateur": "Optimisation d'algorithmes de jeu (détection victoire, IA simple)",
-          "niveau_estime": 3,
-          "preuve_possible": "Descriptions des algorithmes et tests de performance simples"
+        {
+          "code": "AC11.02",
+          "label": "Élaborer des conceptions simples"
+        },
+        {
+          "code": "AC11.03",
+          "label": "Faire des essais et évaluer leurs résultats en regard des spécifications"
+        },
+        {
+          "code": "AC11.04",
+          "label": "Développer des interfaces utilisateurs"
+        },
+        {
+          "code": "AC12.01",
+          "label": "Analyser un problème avec méthode"
         }
-      }
+      ]
     },
     {
       "id": 5,
@@ -243,18 +308,28 @@
         "assets/img/projects/ecosystem_sim.png"
       ],
       "github": "https://github.com/Bessastien/ecosysteme",
-      "competences": {
-        "C1": {
-          "indicateur": "Concevoir et implémenter une simulation en POO",
-          "niveau_estime": 2,
-          "preuve_possible": "Code source, documentation des classes et simulation démontrée"
+      "competences": [
+        {
+          "code": "AC11.01",
+          "label": "Implémenter des conceptions simples"
         },
-        "C2": {
-          "indicateur": "Implémenter et optimiser des comportements algorithmiques (déplacements, reproduction)",
-          "niveau_estime": 3,
-          "preuve_possible": "Explications algorithmiques et comparatifs simples de paramétrage"
+        {
+          "code": "AC11.02",
+          "label": "Élaborer des conceptions simples"
+        },
+        {
+          "code": "AC12.01",
+          "label": "Analyser un problème avec méthode"
+        },
+        {
+          "code": "AC21.03",
+          "label": "Adopter de bonnes pratiques de conception et de programmation"
+        },
+        {
+          "code": "AC11.03",
+          "label": "Faire des essais et évaluer leurs résultats en regard des spécifications"
         }
-      }
+      ]
     },
     {
       "id": 6,
@@ -284,23 +359,28 @@
         "assets/img/projects/portfolio_preview.png"
       ],
       "github": "https://github.com/Bessastien/Portfolio",
-      "competences": {
-        "C1": {
-          "indicateur": "Concevoir, coder et tester une application web interactive complète",
-          "niveau_estime": 3,
-          "preuve_possible": "Code source, démonstration en ligne, documentation technique"
+      "competences": [
+        {
+          "code": "AC11.04",
+          "label": "Développer des interfaces utilisateurs"
         },
-        "C5": {
-          "indicateur": "Conduite du projet personnel : organisation, itérations et documentation",
-          "niveau_estime": 3,
-          "preuve_possible": "Historique des versions, README, notes de conception et planning personnel"
+        {
+          "code": "AC21.02",
+          "label": "Appliquer des principes d’accessibilité et d’ergonomie"
         },
-        "C6": {
-          "indicateur": "Collaboration et gestion de version (GitHub) et modularité pour réutilisation",
-          "niveau_estime": 3,
-          "preuve_possible": "Repository GitHub, issues, pull requests éventuelles"
+        {
+          "code": "AC21.03",
+          "label": "Adopter de bonnes pratiques de conception et de programmation"
+        },
+        {
+          "code": "AC26.04",
+          "label": "Rendre compte de son activité professionnelle"
+        },
+        {
+          "code": "AC16.01",
+          "label": "Appréhender l’écosystème numérique"
         }
-      }
+      ]
     },
     {
       "id": 7,
@@ -326,23 +406,28 @@
         "Documentation technique exhaustive"
       ],
       "github": "https://github.com/Bessastien/sae2.03",
-      "competences": {
-        "C3": {
-          "indicateur": "Installer, configurer et sécuriser un système/service sous Linux",
-          "niveau_estime": 2,
-          "preuve_possible": "Scripts d'installation, documentation, démonstration et tests de sécurité"
+      "competences": [
+        {
+          "code": "AC13.03",
+          "label": "Installer et configurer un système d’exploitation et des outils de développement"
         },
-        "C5": {
-          "indicateur": "Conduite du projet SAE : planification, tests et documentation",
-          "niveau_estime": 2,
-          "preuve_possible": "Livrables SAE, planning, rapports et documentation technique"
+        {
+          "code": "AC13.04",
+          "label": "Configurer un poste de travail dans un réseau d’entreprise"
         },
-        "C6": {
-          "indicateur": "Travail en équipe pour déploiement et coordination",
-          "niveau_estime": 2,
-          "preuve_possible": "Traces de coordination, repository partagé, comptes rendus"
+        {
+          "code": "AC23.03",
+          "label": "Sécuriser les services et données d’un système"
+        },
+        {
+          "code": "AC16.03",
+          "label": "Identifier les statuts, les fonctions et les rôles de chaque membre d’une équipe pluridisciplinaire"
+        },
+        {
+          "code": "AC15.02",
+          "label": "Mettre en place les outils de gestion de projet"
         }
-      }
+      ]
     }
   ]
 }

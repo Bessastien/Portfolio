@@ -81,12 +81,13 @@ function openProjectModal(projectId) {
 
     // Compétences BUT
     const competencesContainer = document.getElementById('modal-competences-container');
-    if (project.competences && Object.keys(project.competences).length > 0) {
+    if (project.competences && project.competences.length > 0) {
         competencesContainer.style.display = 'block';
         const competencesDiv = document.getElementById('modal-competences');
         competencesDiv.innerHTML = '';
 
-        Object.entries(project.competences).forEach(([code, comp]) => {
+        // Nouvelle structure : tableau d'objets { code: "AC...", label: "..." }
+        project.competences.forEach(comp => {
             const compCard = document.createElement('div');
             compCard.className = 'competence-card';
 
@@ -95,27 +96,27 @@ function openProjectModal(projectId) {
 
             const compCode = document.createElement('span');
             compCode.className = 'competence-code';
-            compCode.textContent = code;
+            compCode.textContent = comp.code;
+
+            // Extraction du niveau depuis le code (ex: AC11.01 -> niveau 1)
+            // Le 3ème caractère correspond au niveau
+            const levelChar = comp.code.charAt(2);
+            const level = parseInt(levelChar) || 1;
 
             const compLevel = document.createElement('span');
-            compLevel.className = `competence-level level-${comp.niveau_estime}`;
-            const levelText = ['', 'Initiation', 'Maîtrise partielle', 'Autonomie', 'Maîtrise avancée'];
-            compLevel.textContent = `Niveau ${comp.niveau_estime} - ${levelText[comp.niveau_estime]}`;
+            compLevel.className = `competence-level level-${level}`;
+            const levelLabels = ['', 'Niveau 1', 'Niveau 2', 'Niveau 3'];
+            compLevel.textContent = levelLabels[level] || `Niveau ${level}`;
 
             compHeader.appendChild(compCode);
             compHeader.appendChild(compLevel);
 
             const compIndicator = document.createElement('p');
             compIndicator.className = 'competence-indicator';
-            compIndicator.textContent = comp.indicateur;
-
-            const compProof = document.createElement('p');
-            compProof.className = 'competence-proof';
-            compProof.innerHTML = `<strong>Preuve :</strong> ${comp.preuve_possible}`;
+            compIndicator.textContent = comp.label;
 
             compCard.appendChild(compHeader);
             compCard.appendChild(compIndicator);
-            compCard.appendChild(compProof);
 
             competencesDiv.appendChild(compCard);
         });
